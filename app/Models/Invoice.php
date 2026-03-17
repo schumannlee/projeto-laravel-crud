@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Invoice extends Model
 {
-    //
+    protected $fillable = ['contract_id', 'amount', 'due_date', 'status'];
 }
