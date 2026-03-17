@@ -18,7 +18,7 @@
                     <x-nav-link href="{{ route('plans.index') }}" :active="false">
                         {{ __('Planos') }}
                     </x-nav-link>
-                    <x-nav-link href="#" :active="false">
+                    <x-nav-link href="{{ route('contracts.index') }}" :active="false">
                         {{ __('Contratos') }}
                     </x-nav-link>
                 </div>
