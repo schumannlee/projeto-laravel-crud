@@ -15,7 +15,7 @@
                     <x-nav-link href="#" :active="false">
                         {{ __('Usuários') }}
                     </x-nav-link>
-                    <x-nav-link href="#" :active="false">
+                    <x-nav-link href="{{ route('plans.index') }}" :active="false">
                         {{ __('Planos') }}
                     </x-nav-link>
                     <x-nav-link href="#" :active="false">
@@ -69,7 +69,7 @@
             <x-responsive-nav-link href="#" :active="false">
                 {{ __('Usuários') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link href="#" :active="false">
+            <x-responsive-nav-link href="{{ route('plans.index') }}" :active="false">
                 {{ __('Planos') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link href="#" :active="false">
