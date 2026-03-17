@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Plan; // Facilita chamar o Model
+use Illuminate\Http\Request; // Importa a classe correta do Request
 
 class PlanController extends Controller
 {
@@ -26,14 +27,14 @@ class PlanController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Illuminate\Http\Request $request)
+    public function store(Request $request)
     {
         $request->validate([
             'name' => 'required|string|max:255',
             'price' => 'required|numeric',
         ]);
 
-        \App\Models\Plan::create($request->all());
+        Plan::create($request->all()); // Usando Plan direto pois importamos no topo
 
         return redirect()->route('plans.index')->with('success', 'Plano criado!');
     }
