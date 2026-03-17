@@ -20,15 +20,22 @@ class PlanController extends Controller
      */
     public function create()
     {
-        //
+        return view('plans.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Illuminate\Http\Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'price' => 'required|numeric',
+        ]);
+
+        \App\Models\Plan::create($request->all());
+
+        return redirect()->route('plans.index')->with('success', 'Plano criado!');
     }
 
     /**
