@@ -70,6 +70,22 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+<!-- 
+            <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                {{ __('Dashboard') }}
+            </x-nav-link>
+ -->
+            <x-nav-link href="#" :active="false">
+                {{ __('Usuários') }}
+            </x-nav-link>
+
+            <x-nav-link href="#" :active="false">
+                {{ __('Planos') }}
+            </x-nav-link>
+
+            <x-nav-link href="#" :active="false">
+                {{ __('Contratos') }}
+            </x-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->
@@ -83,6 +99,22 @@
                 <x-responsive-nav-link :href="route('profile.edit')">
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
+
+                <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    {{ __('Dashboard') }}
+                </x-nav-link>
+
+                <x-nav-link href="#" :active="false">
+                    {{ __('Usuários') }}
+                </x-nav-link>
+
+                <x-nav-link href="#" :active="false">
+                    {{ __('Planos') }}
+                </x-nav-link>
+
+                <x-nav-link href="#" :active="false">
+                    {{ __('Contratos') }}
+                </x-nav-link>
 
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">
