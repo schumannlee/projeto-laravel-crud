@@ -21,6 +21,9 @@
                     <x-nav-link href="{{ route('contracts.index') }}" :active="false">
                         {{ __('Contratos') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('invoices.index')" :active="request()->routeIs('invoices.index')">
+                        {{ __('Faturas') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -74,6 +77,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link href="#" :active="false">
                 {{ __('Contratos') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('invoices.index')" :active="request()->routeIs('invoices.index')">
+                {{ __('Faturas') }}
             </x-responsive-nav-link>
         </div>
 

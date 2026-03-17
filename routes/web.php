@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PlanController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContractController;
+use App\Http\Controllers\InvoiceController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,6 +22,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('plans', PlanController::class);
     Route::resource('users', UserController::class);
     Route::resource('contracts', ContractController::class);
+    Route::get('/invoices', [InvoiceController::class, 'index'])->name('invoices.index');
 });
 
 require __DIR__.'/auth.php';
